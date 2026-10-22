@@ -54,6 +54,15 @@ nav li {
     border-radius: 10px;
     box-sizing: border-box;
 }
+
+.content-section img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
     
 
 #main-title {
