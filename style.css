@@ -43,15 +43,18 @@ nav ul {
 nav li {
     display: inline-block;
     margin: 0 15px;
-}
-
+    
 .content-section {
     background-color: #FFFDF9;
-    margin: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
     padding: 25px;
     border: 2px solid #D2B4A1;
     border-radius: 10px;
+    box-sizing: border-box;
 }
+    
 
 #main-title {
     font-size: 36px;
