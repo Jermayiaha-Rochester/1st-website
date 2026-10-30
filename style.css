@@ -1,59 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #FFFDF9;
-    color: #2D2522;
-    margin: 0;
-}
-
-header {
-    background-color: #D2B4A1;
-    color: #2D2522;
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-bottom: 5px solid #E5A89E;
-}
-
-nav {
-    background-color: #E5A89E;
-    padding: 15px;
-    margin: 0 20px 20px 20px;
-    border: 2px solid #D2B4A1;
-    text-align: center;
-}
-
-nav a {
-    color: #2D2522;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    color: #FFFDF9;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.content-section {
-    background-color: #FFFDF9;
-    width: 80%;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 25px;
-    border: 2px solid #D2B4A1;
-    border-radius: 10px;
+* {
     box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFDF9;
+    color: #2D2522;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Headings */
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
 #main-title {
@@ -73,9 +39,133 @@ h3 {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.8;
     font-size: 16px;
 }
+
+/* HEADER */
+
+header {
+    background-color: #D2B4A1;
+    color: #2D2522;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #E5A89E;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #E5A89E;
+    padding: 16px;
+    margin: 0 20px 20px;
+    border: 2px solid #D2B4A1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: #2D2522;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px;
+}
+
+nav a:hover {
+    color: #FFFDF9;
+}
+
+/* MAIN CONTENT */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.content-section {
+    background-color: #FFFDF9;
+    width: 100%;
+    max-width: 850px;
+    margin: 32px auto;
+    padding: 32px;
+    border: 1px solid #D2B4A1;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(45, 37, 34, 0.08);
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #E5A89E;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.content-section h3 {
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+.content-section p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-section img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 24px auto;
+    border-radius: 15px;
+}
+
+/*  PROJECT GRID MOBILE FIRST: 1 COLUMN */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+}
+
+.project-grid article {
+    min-width: 0;
+    padding: 24px;
+    background-color: #FFFDF9;
+    border: 1px solid #D2B4A1;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(45, 37, 34, 0.06);
+}
+
+/*  LINKS  */
 
 a {
     color: #2D2522;
@@ -85,11 +175,82 @@ a:hover {
     color: #E5A89E;
 }
 
+/* FOOTER */
+
 footer {
     background-color: #D2B4A1;
     color: #2D2522;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 32px;
     border-top: 4px solid #E5A89E;
+}
+
+/* TABLET VIEW: 768px AND UP 2 COLUMNS */
+
+@media (min-width: 768px) {
+
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .content-section {
+        padding: 32px;
+    }
+
+}
+
+/*  DESKTOP VIEW: 1200px AND UP 3 COLUMNS*/
+
+@media (min-width: 1200px) {
+
+    .project-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+/* SMALL MOBILE SCREEN ADJUSTMENTS */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 24px 16px;
+    }
+
+    #main-title {
+        font-size: 28px;
+    }
+
+    nav {
+        margin: 0 12px 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .content-section {
+        padding: 16px;
+        margin: 16px auto;
+    }
+
+    .content-section h2 {
+        font-size: 23px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
 }
