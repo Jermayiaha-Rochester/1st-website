@@ -278,3 +278,24 @@ html {
     }
 }
 
+}
+
+/* Current page navigation */
+nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+/* Keyboard focus */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #2D2522;
+    outline-offset: 4px;
+}
+
+/* Accessible hover state */
+nav a:hover {
+    color: #2D2522;
+    text-decoration: underline;
+}
