@@ -259,3 +259,22 @@ footer {
 .content-section h3 {
     color: #2D2522;
 }
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #243447;
+    outline-offset: 4px;
+}
+
+/* Smooth navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
