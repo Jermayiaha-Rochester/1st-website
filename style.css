@@ -254,3 +254,8 @@ footer {
     }
 
 }
+/* Accessibility: improve heading contrast */
+.project-card h3,
+.content-section h3 {
+    color: #2D2522;
+}
